@@ -3,12 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import { Header } from './components/Header';
 import { AboutMe } from './components/AboutMe';
+import { TimeAndLinks } from './components/TimeAndLinks';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <AboutMe />
+      <TimeAndLinks />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
