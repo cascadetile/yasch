@@ -4,6 +4,7 @@ import './App.css';
 import { Header } from './components/Header';
 import { AboutMe } from './components/AboutMe';
 import { TimeAndLinks } from './components/TimeAndLinks';
+import { HorizontalTextSlider } from './components/HorizontalTextSlider';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <AboutMe />
       <TimeAndLinks />
+      <HorizontalTextSlider />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
