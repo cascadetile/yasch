@@ -1,0 +1,60 @@
+.story-on-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  padding: 96px 36px 96px 36px;
+  background-color: #F9F9F9;
+}
+
+.story-on-me__left {
+  width: 337px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 125%;
+  /* or 80px */
+
+  letter-spacing: -0.05em;
+
+  /* Black */
+
+  color: #000000;
+}
+
+.story-on-me__right {
+  max-width: 818px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;
+  /* or 45px */
+
+  letter-spacing: -0.05em;
+
+  /* Black */
+
+  color: #000000;
+}
+
+.story-on-me__resume-link {
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 150%;
+  /* identical to box height, or 45px */
+
+  letter-spacing: -0.05em;
+  text-decoration-line: underline;
+
+  /* Black */
+
+  color: #000000;
+}
