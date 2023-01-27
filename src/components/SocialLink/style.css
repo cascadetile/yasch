@@ -1,0 +1,21 @@
+.social-link {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  /* identical to box height, or 20px */
+
+  letter-spacing: -0.05em;
+
+  /* Black */
+
+  color: #000000;
+
+  border: 1px solid #9D9D9D;
+  border-radius: 10px;
+}
