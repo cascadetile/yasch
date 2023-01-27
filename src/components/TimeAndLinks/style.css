@@ -1,0 +1,14 @@
+.time-and-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 36px 36px 36px 36px;
+}
+
+.time-and-links__links {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+}
