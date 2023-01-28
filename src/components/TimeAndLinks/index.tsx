@@ -1,3 +1,5 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable arrow-body-style */
 import React from 'react';
 import './style.css';
 import { YourAndMyTime } from '../YourAndMyTime';
@@ -16,3 +18,5 @@ export const TimeAndLinks: React.FC = () => {
     </div>
   );
 };
+
+export default TimeAndLinks;
