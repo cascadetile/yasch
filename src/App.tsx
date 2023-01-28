@@ -6,6 +6,7 @@ import { AboutMe } from './components/AboutMe';
 import { TimeAndLinks } from './components/TimeAndLinks';
 import { HorizontalTextSlider } from './components/HorizontalTextSlider';
 import { StoryOnMe } from './components/StoryOnMe';
+import { RecentWorks } from './components/RecentWorks';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <TimeAndLinks />
       <HorizontalTextSlider />
       <StoryOnMe />
+      <RecentWorks />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
