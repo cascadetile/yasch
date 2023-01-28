@@ -1,3 +1,5 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable arrow-body-style */
 import React from 'react';
 import './style.css';
 import { SocialLink } from '../SocialLink';
@@ -28,3 +30,5 @@ export const PreFooter: React.FC = () => {
     </div>
   );
 };
+
+export default PreFooter;
