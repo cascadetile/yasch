@@ -7,6 +7,7 @@ import { TimeAndLinks } from './components/TimeAndLinks';
 import { HorizontalTextSlider } from './components/HorizontalTextSlider';
 import { StoryOnMe } from './components/StoryOnMe';
 import { RecentWorks } from './components/RecentWorks';
+import { PreFooter } from './components/PreFooter';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <HorizontalTextSlider />
       <StoryOnMe />
       <RecentWorks />
+      <PreFooter />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
