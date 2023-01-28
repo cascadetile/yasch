@@ -1,15 +1,29 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable arrow-body-style */
 import React from 'react';
 import './style.css';
 import { SocialLink } from '../SocialLink';
 import { OutsideLink } from '../../assets/OutsideLink';
 
 const recentWorks = [
-  {project: 'The Next-Gen Box', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko'},
-  {project: 'STANZA', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko'},
-  {project: 'Fluxflow', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko'},
-  {project: 'WATT', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko'},
-  {project: 'Rarepass', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko'},
-  {project: 'Posters', year: 2022, type: 'Graphic Design', link: 'https://dribbble.com/yaschenko'},
+  {
+    project: 'The Next-Gen Box', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko',
+  },
+  {
+    project: 'STANZA', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko',
+  },
+  {
+    project: 'Fluxflow', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko',
+  },
+  {
+    project: 'WATT', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko',
+  },
+  {
+    project: 'Rarepass', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko',
+  },
+  {
+    project: 'Posters', year: 2022, type: 'Graphic Design', link: 'https://dribbble.com/yaschenko',
+  },
 ];
 
 export const RecentWorks: React.FC = () => {
@@ -19,7 +33,11 @@ export const RecentWorks: React.FC = () => {
         <div className="recent-works__title-wrapper">
           <h2 className="recent-works__title">Recent works</h2>
           &nbsp;
-          <span className="recent-works__amount">({'0' + recentWorks.length.toString() || '06'})</span>
+          <span className="recent-works__amount">
+            (
+            {`0${recentWorks.length.toString()}`}
+            )
+          </span>
         </div>
         <div className="recent-works__links">
           <SocialLink link="https://dribbble.com/yaschenko" text="Dribbble" />
@@ -33,7 +51,7 @@ export const RecentWorks: React.FC = () => {
               <th className="recent-works__table-header-cell">Project</th>
               <th className="recent-works__table-header-cell">Year</th>
               <th className="recent-works__table-header-cell">Type</th>
-              <th className="recent-works__table-header-cell"></th>
+              <th className="recent-works__table-header-cell">&nbsp;</th>
             </tr>
           </thead>
           <tbody>
@@ -57,3 +75,5 @@ export const RecentWorks: React.FC = () => {
     </div>
   );
 };
+
+export default RecentWorks;
