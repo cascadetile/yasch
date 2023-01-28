@@ -1,3 +1,5 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable arrow-body-style */
 import React, { useEffect, useRef } from 'react';
 import './style.css';
 
@@ -26,14 +28,30 @@ export const HorizontalTextSlider: React.FC = () => {
     <div className="horizontal-text-slider">
       <p className="horizontal-text-slider__marquee">
         <span ref={slideOne} className="horizontal-text-slider__span">
-          ux/ui <span className="horizontal-text-slider__designer">designer</span> ux/ui <span className="horizontal-text-slider__designer">designer</span>&nbsp;
+          ux/ui
+          &nbsp;
+          <span className="horizontal-text-slider__designer">designer</span>
+          &nbsp;
+          ux/ui
+          &nbsp;
+          <span className="horizontal-text-slider__designer">designer</span>
+          &nbsp;
         </span>
       </p>
       <p className="horizontal-text-slider__marquee horizontal-text-slider__marquee2">
         <span ref={slideTwo} className="horizontal-text-slider__span">
-          ux/ui <span className="horizontal-text-slider__designer">designer</span> ux/ui <span className="horizontal-text-slider__designer">designer</span>&nbsp;
+          ux/ui
+          &nbsp;
+          <span className="horizontal-text-slider__designer">designer</span>
+          &nbsp;
+          ux/ui
+          &nbsp;
+          <span className="horizontal-text-slider__designer">designer</span>
+          &nbsp;
         </span>
       </p>
     </div>
   );
 };
+
+export default HorizontalTextSlider;
