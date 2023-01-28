@@ -8,6 +8,7 @@ import { HorizontalTextSlider } from './components/HorizontalTextSlider';
 import { StoryOnMe } from './components/StoryOnMe';
 import { RecentWorks } from './components/RecentWorks';
 import { PreFooter } from './components/PreFooter';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <StoryOnMe />
       <RecentWorks />
       <PreFooter />
+      <Footer />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
