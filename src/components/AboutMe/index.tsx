@@ -1,3 +1,5 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable arrow-body-style */
 import React from 'react';
 import './style.css';
 
@@ -7,7 +9,9 @@ export const AboutMe: React.FC = () => {
       <div className="about-me">
         <div className="about-me__left">
           <div className="about-me__left-title-1">
-            Welcome here, <span>I&apos;m Vlad!</span>
+            Welcome here,
+            &nbsp;
+            <span>I&apos;m Vlad!</span>
           </div>
           <div className="about-me__left-title-2">Creating seamless digital journeys.</div>
         </div>
@@ -19,3 +23,5 @@ export const AboutMe: React.FC = () => {
     </div>
   );
 };
+
+export default AboutMe;
