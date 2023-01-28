@@ -1,3 +1,5 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable arrow-body-style */
 import React, { useEffect, useState } from 'react';
 import './style.css';
 
@@ -13,7 +15,7 @@ export const Time: React.FC<Props> = ({ isKiev, text }) => {
     setInterval(() => {
       const date = new Date();
       if (isKiev) {
-        setTime(date.toLocaleString('en-US', { 
+        setTime(date.toLocaleString('en-US', {
           hour: 'numeric',
           minute: 'numeric',
           hour12: true,
@@ -27,9 +29,11 @@ export const Time: React.FC<Props> = ({ isKiev, text }) => {
 
   return (
     <div className="time">
-      <div className="time__circle"></div>
+      <div className="time__circle">&nbsp;</div>
       <div className="time__value">{time}</div>
       <div className="time__text">{text}</div>
     </div>
   );
 };
+
+export default Time;
