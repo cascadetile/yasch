@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { Logo } from '../../assets/Logo';
+import Logo from '../../assets/Logo';
 import { ToggleWithText } from '../ToggleWithText';
 
 export const Header: React.FC = () => {
