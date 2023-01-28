@@ -1,3 +1,6 @@
+/* eslint-disable react/function-component-definition */
+/* eslint-disable arrow-body-style */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import './style.css';
 
@@ -25,3 +28,5 @@ export const ToggleWithText: React.FC<Props> = ({ label, toggled, onClick }) => 
     </div>
   );
 };
+
+export default ToggleWithText;
