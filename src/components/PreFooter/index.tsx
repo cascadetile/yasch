@@ -24,7 +24,6 @@ export const PreFooter: React.FC = () => {
           <SocialLink link="https://www.linkedin.com/in/pinkaversa" text="LinkedIn" />
           <SocialLink link="https://dribbble.com/PinkAversa" text="Dribbble" />
           <SocialLink link="https://www.behance.net/aversa" text="Behance" />
-          <SocialLink link="https://instagram.com/yaschenko" text="Instagram" />
         </div>
       </div>
     </div>
