@@ -150,3 +150,22 @@
     padding: 96px 36px 156px 36px;
   }
 }
+
+@media (max-width: 570px) {
+  .recent-works {
+    padding: 56px 16px 56px 16px;
+  }
+  .recent-works__title {
+    font-size: 48px;
+  }
+  .recent-works__title-and-links {
+    flex-direction: column;
+    row-gap: 12px;
+    justify-content: flex-start;
+    align-items: normal;
+  }
+  .recent-works__table-header-year-cell,
+  .recent-works__table-header-type-cell {
+    display: none;
+  }
+}

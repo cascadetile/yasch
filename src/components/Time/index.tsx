@@ -30,8 +30,10 @@ export const Time: React.FC<Props> = ({ isKiev, text }) => {
   return (
     <div className="time">
       <div className="time__circle">&nbsp;</div>
-      <div className="time__value">{time}</div>
-      <div className="time__text">{text}</div>
+      <div className="time__value-text-wrapper">
+        <div className="time__value">{time}</div>
+        <div className="time__text">{text}</div>
+      </div>
     </div>
   );
 };

@@ -125,3 +125,19 @@
     text-align: center;
   }
 }
+
+@media (max-width: 570px) {
+  .about-me__wrapper {
+    padding: 0 16px 0 16px;
+  }
+  .about-me {
+    padding: 36px 0 36px 0;
+  }
+  .about-me__left-title-1 {
+    font-size: 32px;
+  }
+  .about-me__left-title-2 {
+    font-size: 40px;
+    max-width: 343px;
+  }
+}

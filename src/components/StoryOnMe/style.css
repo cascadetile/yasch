@@ -82,3 +82,19 @@
     padding: 56px 24px 56px 24px;
   }
 }
+
+@media (max-width: 570px) {
+  .story-on-me {
+    padding: 36px 16px 36px 16px;
+  }
+  .story-on-me__left {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  .story-on-me__right {
+    font-size: 20px;
+  }
+  .story-on-me__resume-link {
+    font-size: 20px;
+  }
+}

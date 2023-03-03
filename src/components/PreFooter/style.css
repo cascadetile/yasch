@@ -13,6 +13,12 @@
   margin-right: auto;
 }
 
+.prefooter__time-and-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+}
+
 .prefooter__title-1 {
   font-family: 'Inter';
   font-style: normal;
@@ -135,5 +141,32 @@
   .prefooter__email-and-links {
     flex-direction: column;
     row-gap: 24px;
+  }
+}
+
+@media (max-width: 570px) {
+  .prefooter {
+    padding: 36px 16px 36px 16px;
+  }
+  .prefooter__time-and-title-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 42px;
+  }
+  .prefooter__title-1 {
+    font-size: 26px;
+  }
+  .prefooter__title-2 {
+    font-size: 26px;
+    max-width: 303px;
+  }
+  .prefooter__email-form {
+    column-gap: 12px;
+    padding-right: 12px;
+  }
+  .prefooter__email-input {
+    width: 236px;
+    font-size: 20px;
+    padding: 8px 12px 8px 12px;
   }
 }

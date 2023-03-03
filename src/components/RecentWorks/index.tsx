@@ -49,8 +49,16 @@ export const RecentWorks: React.FC = () => {
           <thead>
             <tr>
               <th className="recent-works__table-header-cell">Project</th>
-              <th className="recent-works__table-header-cell">Year</th>
-              <th className="recent-works__table-header-cell">Type</th>
+              <th
+                className="recent-works__table-header-cell recent-works__table-header-year-cell"
+              >
+                Year
+              </th>
+              <th
+                className="recent-works__table-header-cell recent-works__table-header-type-cell"
+              >
+                Type
+              </th>
               <th className="recent-works__table-header-cell">&nbsp;</th>
             </tr>
           </thead>
@@ -58,8 +66,16 @@ export const RecentWorks: React.FC = () => {
             {recentWorks.map((work) => (
               <tr>
                 <td className="recent-works__table-cell">{work.project}</td>
-                <td className="recent-works__table-cell">{work.year}</td>
-                <td className="recent-works__table-cell">{work.type}</td>
+                <td
+                  className="recent-works__table-cell recent-works__table-header-year-cell"
+                >
+                  {work.year}
+                </td>
+                <td
+                  className="recent-works__table-cell recent-works__table-header-type-cell"
+                >
+                  {work.type}
+                </td>
                 <td className="recent-works__table-cell recent-works__table-cell--last">
                   <a className="recent-works__table-link" href={work.link}>
                     View full case
