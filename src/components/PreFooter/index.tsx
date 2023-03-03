@@ -21,9 +21,9 @@ export const PreFooter: React.FC = () => {
           </div>
         </form>
         <div className="prefooter__links">
-          <SocialLink link="https://linkedin.com/yaschenko" text="LinkedIn" />
-          <SocialLink link="https://dribbble.com/yaschenko" text="Dribbble" />
-          <SocialLink link="https://behance.com/yaschenko" text="Behance" />
+          <SocialLink link="https://www.linkedin.com/in/pinkaversa" text="LinkedIn" />
+          <SocialLink link="https://dribbble.com/PinkAversa" text="Dribbble" />
+          <SocialLink link="https://www.behance.net/aversa" text="Behance" />
           <SocialLink link="https://instagram.com/yaschenko" text="Instagram" />
         </div>
       </div>
