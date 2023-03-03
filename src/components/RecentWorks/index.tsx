@@ -40,8 +40,8 @@ export const RecentWorks: React.FC = () => {
           </span>
         </div>
         <div className="recent-works__links">
-          <SocialLink link="https://dribbble.com/yaschenko" text="Dribbble" />
-          <SocialLink link="https://behance.com/yaschenko" text="Behance" />
+          <SocialLink link="https://dribbble.com/PinkAversa" text="Dribbble" />
+          <SocialLink link="https://www.behance.net/aversa" text="Behance" />
         </div>
       </div>
       <div className="recent-works__table-wrapper">
