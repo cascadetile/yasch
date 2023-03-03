@@ -1,10 +1,17 @@
+.story-on-me__wrapper {
+  background-color: #F9F9F9;
+}
+
 .story-on-me {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: left;
   padding: 96px 36px 96px 36px;
-  background-color: #F9F9F9;
+
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .story-on-me__left {

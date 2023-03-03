@@ -5,6 +5,10 @@
   justify-content: space-between;
   box-sizing: border-box;
   padding: 36px 36px 36px 36px;
+
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .time-and-links__links {

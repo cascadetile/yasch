@@ -11,25 +11,27 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <div className="header">
-      <div>
-        <Logo />
+    <div className="header__wrapper">
+      <div className="header">
+        <div>
+          <Logo />
+        </div>
+        <div className="header__menu">
+          <div className="header__menu-item header__menu-item--selected">
+            <a href="#home" className="header__menu-item-link">Home</a>
+          </div>
+          <div className="header__menu-item">
+            <a href="#aboutme" className="header__menu-item-link">About me</a>
+          </div>
+          <div className="header__menu-item">
+            <a href="#works" className="header__menu-item-link">Works</a>
+          </div>
+          <div className="header__menu-item">
+            <a href="#contacts" className="header__menu-item-link">Contacts</a>
+          </div>
+        </div>
+        <ToggleWithText label="My resume" toggled={false} onClick={onToggleClick} />
       </div>
-      <div className="header__menu">
-        <div className="header__menu-item header__menu-item--selected">
-          <a href="#home" className="header__menu-item-link">Home</a>
-        </div>
-        <div className="header__menu-item">
-          <a href="#aboutme" className="header__menu-item-link">About me</a>
-        </div>
-        <div className="header__menu-item">
-          <a href="#works" className="header__menu-item-link">Works</a>
-        </div>
-        <div className="header__menu-item">
-          <a href="#contacts" className="header__menu-item-link">Contacts</a>
-        </div>
-      </div>
-      <ToggleWithText label="My resume" toggled={false} onClick={onToggleClick} />
     </div>
   );
 };
