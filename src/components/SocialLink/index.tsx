@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const SocialLink: React.FC<Props> = ({ link, text }) => {
-  return <a href={link} className="social-link">{text}</a>;
+  return <a href={link} target="_blank" rel="noreferrer" className="social-link">{text}</a>;
 };
 
 export default SocialLink;
