@@ -76,3 +76,9 @@
     margin-bottom: 42px;
   }
 }
+
+@media (max-width: 800px) {
+  .story-on-me {
+    padding: 56px 24px 56px 24px;
+  }
+}

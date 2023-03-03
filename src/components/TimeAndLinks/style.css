@@ -16,3 +16,10 @@
   flex-direction: row;
   column-gap: 16px;
 }
+
+@media (max-width: 865px) {
+  .time-and-links {
+    flex-direction: column;
+    row-gap: 36px;
+  }
+}
