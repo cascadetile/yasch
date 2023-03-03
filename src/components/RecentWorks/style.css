@@ -144,3 +144,9 @@
   stroke: #F26F0F;
   transition: all 1s;
 }
+
+@media (max-width: 1200px) {
+  .recent-works {
+    padding: 96px 36px 156px 36px;
+  }
+}

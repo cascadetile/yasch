@@ -92,3 +92,9 @@
 
   color: #000000;
 }
+
+@media (max-width: 1200px) {
+  .about-me {
+    padding: 56px 0 36px 0;
+  }
+}

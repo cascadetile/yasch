@@ -8,6 +8,7 @@
   justify-content: space-between;
   text-align: left;
   padding: 96px 36px 96px 36px;
+  column-gap: 32px;
 
   max-width: 1440px;
   margin-left: auto;
@@ -64,4 +65,14 @@
   /* Black */
 
   color: #000000;
+}
+
+@media (max-width: 1200px) {
+  .story-on-me {
+    flex-direction: column;
+  }
+  .story-on-me__left {
+    width: auto;
+    margin-bottom: 42px;
+  }
 }
