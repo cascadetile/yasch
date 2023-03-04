@@ -89,6 +89,7 @@
   }
   .story-on-me__left {
     font-size: 48px;
+    max-width: 280px;
     margin-bottom: 24px;
   }
   .story-on-me__right {
