@@ -1,32 +1,52 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './style.css';
 import { SocialLink } from '../SocialLink';
 import { OutsideLink } from '../../assets/OutsideLink';
+import { TableHoverPicture } from '../TableHoverPicture';
 
 const recentWorks = [
   {
-    project: 'The Next-Gen Box', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko',
+    project: 'The Next-Gen Box', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko', preview: 'https://cdn.dribbble.com/userupload/4213309/file/original-9c2bffae058e02b03ba88559922b3a79.png?compress=1&resize=1600x1200',
   },
   {
-    project: 'STANZA', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko',
+    project: 'STANZA', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko', preview: 'https://cdn.dribbble.com/userupload/4213308/file/original-cd478dc81785b164d300bfc3bc441052.png?compress=1&resize=1600x1200',
   },
   {
-    project: 'Fluxflow', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko',
+    project: 'Fluxflow', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko', preview: 'https://cdn.dribbble.com/userupload/4213308/file/original-cd478dc81785b164d300bfc3bc441052.png?compress=1&resize=1600x1200',
   },
   {
-    project: 'WATT', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko',
+    project: 'WATT', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko', preview: '',
   },
   {
-    project: 'Rarepass', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko',
+    project: 'Rarepass', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko', preview: '',
   },
   {
-    project: 'Posters', year: 2022, type: 'Graphic Design', link: 'https://dribbble.com/yaschenko',
+    project: 'Posters', year: 2022, type: 'Graphic Design', link: 'https://dribbble.com/yaschenko', preview: '',
   },
 ];
 
 export const RecentWorks: React.FC = () => {
+  const [imgUrl, setImgUrl] = useState('');
+  const [previewCoords, setPreviewCoords] = useState([0, 0]);
+  const [isPreviewVisible, setIsPreviewVisible] = useState(false);
+  const [tableRect, setTableRect] = useState<DOMRect | null>(null);
+  const [tiltDegree, setTiltDegree] = useState<number>(0);
+
+  const tableRef = useRef<HTMLTableElement>(null);
+  useEffect(() => {
+    if (tableRef.current) {
+      setTableRect(tableRef.current.getBoundingClientRect());
+    }
+  }, []);
+
+  const calcTiltDegrees = (e: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => {
+    const currentPercent = (e.clientX - tableRect!.left) / tableRect!.width;
+    const tiltDegreeValue = -10 + (10 - -10) * currentPercent;
+    setTiltDegree(tiltDegreeValue);
+  };
+
   return (
     <div className="recent-works">
       <div className="recent-works__title-and-links">
@@ -45,7 +65,7 @@ export const RecentWorks: React.FC = () => {
         </div>
       </div>
       <div className="recent-works__table-wrapper">
-        <table className="recent-works__table">
+        <table ref={tableRef} className="recent-works__table">
           <thead>
             <tr>
               <th className="recent-works__table-header-cell">Project</th>
@@ -64,17 +84,31 @@ export const RecentWorks: React.FC = () => {
           </thead>
           <tbody>
             {recentWorks.map((work) => (
-              <tr>
-                <td className="recent-works__table-cell">{work.project}</td>
+              <tr
+                onMouseMove={(e) => {
+                  setImgUrl(work.preview);
+                  setPreviewCoords([e.pageX - 100, e.pageY - 100]);
+                  setIsPreviewVisible(true);
+                  calcTiltDegrees(e);
+                }}
+                onMouseLeave={() => setIsPreviewVisible(false)}
+                className="recent-works__table-row"
+              >
+                <td className="recent-works__table-cell">
+                  <span className="recent-works__table-cell-content">{work.project}</span>
+                  <div className="recent-works__table-cell-bg" />
+                </td>
                 <td
                   className="recent-works__table-cell recent-works__table-header-year-cell"
                 >
-                  {work.year}
+                  <span className="recent-works__table-cell-content">{work.year}</span>
+                  <div className="recent-works__table-cell-bg" />
                 </td>
                 <td
                   className="recent-works__table-cell recent-works__table-header-type-cell"
                 >
-                  {work.type}
+                  <span className="recent-works__table-cell-content">{work.type}</span>
+                  <div className="recent-works__table-cell-bg" />
                 </td>
                 <td className="recent-works__table-cell recent-works__table-cell--last">
                   <a className="recent-works__table-link" href={work.link}>
@@ -82,12 +116,21 @@ export const RecentWorks: React.FC = () => {
                     &nbsp;
                     <OutsideLink />
                   </a>
+                  <div className="recent-works__table-cell-bg" />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      {
+        isPreviewVisible
+        && (
+          <div className="recent-works__preview-wrapper" style={{ top: previewCoords[1], left: previewCoords[0], transform: `rotate(${tiltDegree}deg)` }}>
+            <TableHoverPicture imgUrl={imgUrl} />
+          </div>
+        )
+      }
     </div>
   );
 };
