@@ -85,11 +85,15 @@ export const RecentWorks: React.FC = () => {
           <tbody>
             {recentWorks.map((work) => (
               <tr
-                onMouseMove={(e) => {
-                  setImgUrl(work.preview);
-                  setPreviewCoords([e.pageX - 100, e.pageY - 100]);
+                onMouseEnter={() => {
                   setIsPreviewVisible(true);
-                  calcTiltDegrees(e);
+                  setImgUrl(work.preview);
+                }}
+                onMouseMove={(e) => {
+                  setTimeout(() => {
+                    setPreviewCoords([e.pageX - 100, e.pageY - 100]);
+                    calcTiltDegrees(e);
+                  }, 100);
                 }}
                 onMouseLeave={() => setIsPreviewVisible(false)}
                 className="recent-works__table-row"
