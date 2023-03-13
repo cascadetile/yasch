@@ -19,7 +19,9 @@ export const Header: React.FC = () => {
         </div>
         <div className="header__menu">
           <div className="header__menu-item header__menu-item--selected">
-            <a href="#home" className="header__menu-item-link">Home</a>
+            <Link className="header__menu-item-link" to="/">
+              Home
+            </Link>
           </div>
           <div className="header__menu-item">
             <a href="#aboutme" className="header__menu-item-link">About me</a>
