@@ -7,7 +7,7 @@ import { YourAndMyTime } from '../YourAndMyTime';
 
 export const PreFooter: React.FC = () => {
   return (
-    <div className="prefooter__wrapper">
+    <div id="contacts" className="prefooter__wrapper">
       <div className="prefooter">
         <div className="prefooter__time-and-title-wrapper">
           <div className="prefooter__time-wrapper">

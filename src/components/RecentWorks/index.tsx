@@ -48,7 +48,7 @@ export const RecentWorks: React.FC = () => {
   };
 
   return (
-    <div className="recent-works">
+    <div id="works" className="recent-works">
       <div className="recent-works__title-and-links">
         <div className="recent-works__title-wrapper">
           <h2 className="recent-works__title">Recent works</h2>

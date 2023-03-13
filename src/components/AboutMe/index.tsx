@@ -30,7 +30,7 @@ export const AboutMe: React.FC = () => {
   };
 
   return (
-    <div className="about-me__wrapper">
+    <div id="aboutme" className="about-me__wrapper">
       <div className="about-me">
         <div className="about-me__left">
           <div className="about-me__left-title-1">
