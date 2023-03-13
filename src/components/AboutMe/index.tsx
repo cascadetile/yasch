@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Tooltip } from '../Tooltip';
 import './style.css';
 
-const email = 'vladco@dev';
+const email = 'vlad@co.dev';
 
 export const AboutMe: React.FC = () => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
