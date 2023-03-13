@@ -55,9 +55,33 @@
   color: #000000;
 }
 
+.header__menu-item--resume {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  /* identical to box height, or 20px */
+
+  letter-spacing: -0.05em;
+
+  /* Black */
+
+  color: #000000;
+
+  justify-self: flex-end;
+}
+
 .header__menu-item-link {
   color: inherit;
   text-decoration: none;
+}
+
+.header__resume-and-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 34.8px;
 }
 
 @media (max-width: 735px) {

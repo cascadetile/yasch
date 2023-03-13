@@ -1,9 +1,10 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 import { Logo } from '../../assets/Logo';
-import { ToggleWithText } from '../ToggleWithText';
+import { Toggle } from '../Toggle';
 
 export const Header: React.FC = () => {
   const onToggleClick = (value: boolean) => {
@@ -30,7 +31,14 @@ export const Header: React.FC = () => {
             <a href="#contacts" className="header__menu-item-link">Contacts</a>
           </div>
         </div>
-        <ToggleWithText label="My resume" toggled={false} onClick={onToggleClick} />
+        <div className="header__resume-and-toggle">
+          <div className="header__menu-item header__menu-item--resume">
+            <Link className="header__menu-item-link" to="/resume">
+              My resume
+            </Link>
+          </div>
+          <Toggle toggled={false} onClick={onToggleClick} />
+        </div>
       </div>
     </div>
   );

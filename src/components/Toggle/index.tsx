@@ -5,12 +5,11 @@ import React, { useState } from 'react';
 import './style.css';
 
 interface Props {
-  label: string
   toggled: boolean
   onClick: (value: boolean) => void
 }
 
-export const ToggleWithText: React.FC<Props> = ({ label, toggled, onClick }) => {
+export const Toggle: React.FC<Props> = ({ toggled, onClick }) => {
   const [isToggled, toggle] = useState(toggled);
 
   const callback = () => {
@@ -19,14 +18,13 @@ export const ToggleWithText: React.FC<Props> = ({ label, toggled, onClick }) => 
   };
 
   return (
-    <div className="toggle-with-text">
-      <span className="toggle-with-text__text">{label}</span>
-      <label className="toggle-with-text__label">
-        <input className="toggle-with-text__input" type="checkbox" defaultChecked={isToggled} onClick={callback} />
-        <span className="toggle-with-text__span" />
+    <div className="toggle">
+      <label className="toggle__label">
+        <input className="toggle__input" type="checkbox" defaultChecked={isToggled} onClick={callback} />
+        <span className="toggle__span" />
       </label>
     </div>
   );
 };
 
-export default ToggleWithText;
+export default Toggle;
