@@ -1,25 +1,18 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Header } from './components/Header';
-import { AboutMe } from './components/AboutMe';
-import { TimeAndLinks } from './components/TimeAndLinks';
-import { HorizontalTextSlider } from './components/HorizontalTextSlider';
-import { StoryOnMe } from './components/StoryOnMe';
-import { RecentWorks } from './components/RecentWorks';
-import { PreFooter } from './components/PreFooter';
-import { Footer } from './components/Footer';
+import { Main } from './pages/Main';
+import { ResumePage } from './pages/ResumePage';
 
 function App() {
   return (
     <div className="app">
-      <Header />
-      <AboutMe />
-      <TimeAndLinks />
-      <HorizontalTextSlider />
-      <StoryOnMe />
-      <RecentWorks />
-      <PreFooter />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/resume" element={<ResumePage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

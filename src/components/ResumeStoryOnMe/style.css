@@ -1,0 +1,68 @@
+.resume-story-on-me {
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  margin-top: 96px;
+}
+
+.resume-story-on-me__title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  /* identical to box height, or 40px */
+
+  letter-spacing: -0.05em;
+
+  /* Black */
+
+  color: #000000;
+}
+
+.resume-story-on-me__text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* or 30px */
+
+  letter-spacing: -0.05em;
+
+  /* Black */
+
+  color: #000000;
+}
+
+@media (max-width: 1000px) {
+  .resume-story-on-me {
+    margin-top: 0;
+  }
+  .resume-story-on-me__text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .resume-story-on-me {
+    row-gap: 32px;
+  }
+  .resume-story-on-me__text {
+    font-size: 14px;
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .resume-story-on-me {
+    row-gap: 24px;
+  }
+  .resume-story-on-me__text {
+    font-size: 16px;
+    row-gap: 32px;
+  }
+}
