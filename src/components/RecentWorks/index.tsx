@@ -34,11 +34,24 @@ export const RecentWorks: React.FC = () => {
   const [tableRect, setTableRect] = useState<DOMRect | null>(null);
   const [tiltDegree, setTiltDegree] = useState<number>(0);
 
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  const handleWindowSizeChange = () => {
+    setWidth(window.innerWidth);
+  };
+
+  const isMobile = width <= 768;
+
   const tableRef = useRef<HTMLTableElement>(null);
   useEffect(() => {
     if (tableRef.current) {
       setTableRect(tableRef.current.getBoundingClientRect());
     }
+
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
   }, []);
 
   const calcTiltDegrees = (e: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => {
@@ -86,8 +99,10 @@ export const RecentWorks: React.FC = () => {
             {recentWorks.map((work) => (
               <tr
                 onMouseEnter={() => {
-                  setIsPreviewVisible(true);
-                  setImgUrl(work.preview);
+                  if (!isMobile) {
+                    setIsPreviewVisible(true);
+                    setImgUrl(work.preview);
+                  }
                 }}
                 onMouseMove={(e) => {
                   setTimeout(() => {
