@@ -25,7 +25,7 @@ export const AboutMe: React.FC = () => {
 
   return (
     <div id="aboutme" className={`about-me__wrapper about-me__wrapper--${theme}`}>
-      <div className="about-me">
+      <div className={`about-me about-me--${theme}`}>
         <div className="about-me__left">
           <div className={`about-me__left-title-1 about-me__left-title-1--${theme}`}>
             Welcome here,

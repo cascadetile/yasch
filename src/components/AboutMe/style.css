@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+.about-me--dark {
+  border-bottom: 1px solid #373737;
+}
+
 .about-me__left {
   display: flex;
   flex-direction: column;
