@@ -1,15 +1,9 @@
 import React, { createContext, useMemo, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import { ThemeContext } from './contexts';
 import { Main } from './pages/Main';
 import { ResumePage } from './pages/ResumePage';
-
-interface IThemeContext {
-  theme: string
-  setTheme: React.Dispatch<React.SetStateAction<string>>
-}
-
-const ThemeContext = createContext<IThemeContext>({ theme: 'light', setTheme: () => {} });
 
 function App() {
   const [theme, setTheme] = useState('light');
