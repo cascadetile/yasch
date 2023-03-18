@@ -2,13 +2,15 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { ThemeContext } from '../../contexts';
 import { Tooltip } from '../Tooltip';
 import './style.css';
 
 const email = 'vlad@co.dev';
 
 export const AboutMe: React.FC = () => {
+  const { theme } = useContext(ThemeContext);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [tooltipText, setTooltipText] = useState('Click to copy');
   const [tooltipPos, setTooltipPos] = useState([0, 0]);
@@ -22,20 +24,20 @@ export const AboutMe: React.FC = () => {
   };
 
   return (
-    <div id="aboutme" className="about-me__wrapper">
+    <div id="aboutme" className={`about-me__wrapper about-me__wrapper--${theme}`}>
       <div className="about-me">
         <div className="about-me__left">
-          <div className="about-me__left-title-1">
+          <div className={`about-me__left-title-1 about-me__left-title-1--${theme}`}>
             Welcome here,
             &nbsp;
             <span>I&apos;m Vlad!</span>
           </div>
-          <div className="about-me__left-title-2">Creating seamless digital journeys.</div>
+          <div className={`about-me__left-title-2 about-me__left-title-2--${theme}`}>Creating seamless digital journeys.</div>
         </div>
         <div className="about-me__right">
           <div className="about-me__right-title-1">for collaborations</div>
           <div
-            className="about-me__right-title-2"
+            className={`about-me__right-title-2 about-me__right-title-2--${theme}`}
           >
             <span
               onMouseEnter={() => setIsTooltipVisible(true)}
