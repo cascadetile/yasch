@@ -1,7 +1,7 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './style.css';
 import { Logo } from '../../assets/Logo';
 import { Toggle } from '../Toggle';
@@ -29,9 +29,12 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
             && (
               <>
                 <div className="header__menu-item header__menu-item--selected">
-                  <Link className="header__menu-item-link" to="/">
+                  <NavLink
+                    className={({ isActive }) => { return isActive ? 'header__menu-item-link header__menu-item-link--active' : 'header__menu-item-link'; }}
+                    to="/"
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </div>
                 <div className="header__menu-item">
                   <a href="#aboutme" className="header__menu-item-link">About me</a>
@@ -48,9 +51,12 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
         </div>
         <div className="header__resume-and-toggle">
           <div className="header__menu-item header__menu-item--resume">
-            <Link className="header__menu-item-link" to="/resume">
+            <NavLink
+              className={({ isActive }) => { return isActive ? 'header__menu-item-link header__menu-item-link--active' : 'header__menu-item-link'; }}
+              to="/resume"
+            >
               My resume
-            </Link>
+            </NavLink>
           </div>
           <Toggle toggled={false} onClick={onToggleClick} />
         </div>

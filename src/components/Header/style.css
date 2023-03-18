@@ -77,6 +77,10 @@
   text-decoration: none;
 }
 
+.header__menu-item-link--active {
+  color: #F26F0F;
+}
+
 .header__resume-and-toggle {
   display: flex;
   flex-direction: row;
