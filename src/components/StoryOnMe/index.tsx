@@ -1,6 +1,7 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 export const StoryOnMe: React.FC = () => {
@@ -23,7 +24,9 @@ export const StoryOnMe: React.FC = () => {
             user needs and develop intuitive and user-friendly interfaces.
           </div>
           <div>
-            <a className="story-on-me__resume-link" href="#resume">See my resume</a>
+            <Link className="story-on-me__resume-link" to="/resume">
+              See my resume
+            </Link>
           </div>
         </div>
       </div>
