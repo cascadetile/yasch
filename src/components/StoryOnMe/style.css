@@ -2,6 +2,10 @@
   background-color: #F9F9F9;
 }
 
+.story-on-me__wrapper--dark {
+  background-color: rgb(0, 0, 0);
+}
+
 .story-on-me {
   display: flex;
   flex-direction: row;
@@ -33,6 +37,10 @@
   color: #000000;
 }
 
+.story-on-me__left--dark {
+  color: #FFFFFF;
+}
+
 .story-on-me__right {
   max-width: 818px;
   display: flex;
@@ -50,6 +58,10 @@
   /* Black */
 
   color: #000000;
+}
+
+.story-on-me__right--dark {
+  color: #FFFFFF;
 }
 
 .story-on-me__resume-link {

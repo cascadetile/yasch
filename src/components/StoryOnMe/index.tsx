@@ -1,17 +1,19 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../contexts';
 import './style.css';
 
 export const StoryOnMe: React.FC = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="story-on-me__wrapper">
+    <div className={`story-on-me__wrapper story-on-me__wrapper--${theme}`}>
       <div className="story-on-me">
-        <div className="story-on-me__left">
+        <div className={`story-on-me__left story-on-me__left--${theme}`}>
           The inside story on me
         </div>
-        <div className="story-on-me__right">
+        <div className={`story-on-me__right story-on-me__right--${theme}`}>
           <div>
             As a UX/UI designer with 2 years of experience, I have a strong foundation
             in user-centered design principles and a passion for creating intuitive and
