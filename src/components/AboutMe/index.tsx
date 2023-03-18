@@ -2,7 +2,7 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Tooltip } from '../Tooltip';
 import './style.css';
 
@@ -11,15 +11,7 @@ const email = 'vlad@co.dev';
 export const AboutMe: React.FC = () => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [tooltipText, setTooltipText] = useState('Click to copy');
-  const emailRef = useRef<HTMLDivElement>(null);
   const [tooltipPos, setTooltipPos] = useState([0, 0]);
-
-  useEffect(() => {
-    if (emailRef.current) {
-      const { left, top } = emailRef.current.getBoundingClientRect();
-      setTooltipPos([left + 35, top + 40]);
-    }
-  }, []);
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -46,8 +38,8 @@ export const AboutMe: React.FC = () => {
             className="about-me__right-title-2"
           >
             <span
-              ref={emailRef}
               onMouseEnter={() => setIsTooltipVisible(true)}
+              onMouseMove={(e) => setTooltipPos([e.pageX + 10, e.pageY + 10])}
               onMouseLeave={() => setIsTooltipVisible(false)}
               onClick={() => copyEmail()}
             >
