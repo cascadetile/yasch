@@ -19,7 +19,9 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
     <div className="header__wrapper">
       <div className="header">
         <div>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
         <div className="header__menu">
           {
