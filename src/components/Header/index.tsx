@@ -6,7 +6,11 @@ import './style.css';
 import { Logo } from '../../assets/Logo';
 import { Toggle } from '../Toggle';
 
-export const Header: React.FC = () => {
+interface IProps {
+  hideMenu: boolean
+}
+
+export const Header: React.FC<IProps> = ({ hideMenu }) => {
   const onToggleClick = (value: boolean) => {
     console.log(value);
   };
@@ -18,20 +22,27 @@ export const Header: React.FC = () => {
           <Logo />
         </div>
         <div className="header__menu">
-          <div className="header__menu-item header__menu-item--selected">
-            <Link className="header__menu-item-link" to="/">
-              Home
-            </Link>
-          </div>
-          <div className="header__menu-item">
-            <a href="#aboutme" className="header__menu-item-link">About me</a>
-          </div>
-          <div className="header__menu-item">
-            <a href="#works" className="header__menu-item-link">Works</a>
-          </div>
-          <div className="header__menu-item">
-            <a href="#contacts" className="header__menu-item-link">Contacts</a>
-          </div>
+          {
+            !hideMenu
+            && (
+              <>
+                <div className="header__menu-item header__menu-item--selected">
+                  <Link className="header__menu-item-link" to="/">
+                    Home
+                  </Link>
+                </div>
+                <div className="header__menu-item">
+                  <a href="#aboutme" className="header__menu-item-link">About me</a>
+                </div>
+                <div className="header__menu-item">
+                  <a href="#works" className="header__menu-item-link">Works</a>
+                </div>
+                <div className="header__menu-item">
+                  <a href="#contacts" className="header__menu-item-link">Contacts</a>
+                </div>
+              </>
+            )
+          }
         </div>
         <div className="header__resume-and-toggle">
           <div className="header__menu-item header__menu-item--resume">

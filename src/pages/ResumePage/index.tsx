@@ -9,7 +9,7 @@ import { Resume } from '../../components/Resume';
 export const ResumePage: React.FC = () => {
   return (
     <>
-      <Header />
+      <Header hideMenu />
       <Resume />
       <PreFooter />
       <Footer />

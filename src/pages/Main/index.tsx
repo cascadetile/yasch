@@ -13,7 +13,7 @@ import { TimeAndLinks } from '../../components/TimeAndLinks';
 export const Main: React.FC = () => {
   return (
     <>
-      <Header />
+      <Header hideMenu={false} />
       <AboutMe />
       <TimeAndLinks />
       <HorizontalTextSlider />
