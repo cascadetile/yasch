@@ -21,6 +21,10 @@
   border-radius: 10px;
 }
 
+.social-link--dark {
+  color: #FFFFFF;
+}
+
 .social-link:hover {
   background-color: #F26F0F;
   transition: all 1s;
