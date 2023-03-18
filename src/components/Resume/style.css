@@ -8,6 +8,7 @@
   padding-top: 96px;
   padding-left: 36px;
   padding-right: 36px;
+  box-sizing: border-box;
 }
 
 .resume__name-and-story {
