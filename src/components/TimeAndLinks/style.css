@@ -1,3 +1,7 @@
+.time-and-links__wrapper--dark {
+  background: rgb(0, 0, 0, 1);
+}
+
 .time-and-links {
   display: flex;
   flex-direction: row;
