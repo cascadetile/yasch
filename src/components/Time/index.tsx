@@ -1,6 +1,7 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '../../contexts';
 import './style.css';
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 
 export const Time: React.FC<Props> = ({ isKiev, text }) => {
   const [time, setTime] = useState('12:00 AM');
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     setInterval(() => {
@@ -31,7 +33,7 @@ export const Time: React.FC<Props> = ({ isKiev, text }) => {
     <div className="time">
       <div className="time__circle">&nbsp;</div>
       <div className="time__value-text-wrapper">
-        <div className="time__value">{time}</div>
+        <div className={`time__value time__value--${theme}`}>{time}</div>
         <div className="time__text">{text}</div>
       </div>
     </div>
