@@ -13,6 +13,8 @@
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+
+  box-sizing: border-box;
 }
 
 .story-on-me__left {
