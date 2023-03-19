@@ -23,6 +23,11 @@ export const ResumeStoryOnMe: React.FC = () => {
           mobile applications, and have worked with cross-functional teams to understand
           user needs and develop intuitive and user-friendly interfaces.
         </div>
+        <div>
+          I am proficient in design tools. I am always looking to learn and grow as a
+          designer, and am excited to continue building my skills and expertise in the
+          field..
+        </div>
       </div>
     </div>
   );
