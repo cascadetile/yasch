@@ -24,6 +24,10 @@
   color: #000000;
 }
 
+.resume-group-item__title--dark {
+  color: #FFFFFF;
+}
+
 .resume-group-item__subtitle {
   font-family: 'Inter';
   font-style: normal;
@@ -35,6 +39,10 @@
   letter-spacing: -0.05em;
 
   color: #000000;
+}
+
+.resume-group-item__subtitle--dark {
+  color: #FFFFFF;
 }
 
 .resume-group-item__role-and-time {
@@ -58,6 +66,10 @@
   color: #000000;
 
   margin-bottom: 4px;
+}
+
+.resume-group-item__role--dark {
+  color: #FFFFFF;
 }
 
 .resume-group-item__time {
@@ -86,6 +98,10 @@
 
   border: 1px solid #9D9D9D;
   border-radius: 7px;
+}
+
+.resume-group-item__time--dark {
+  color: #FFFFFF;
 }
 
 .resume-group-item__text {

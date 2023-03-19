@@ -1,7 +1,8 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/require-default-props */
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../contexts';
 import './style.css';
 
 interface IProps {
@@ -15,6 +16,7 @@ interface IProps {
 export const ResumeGroupItem: React.FC<IProps> = ({
   title, subtitle, jobRole, time, text,
 }) => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="resume-group-item">
       {
@@ -25,13 +27,13 @@ export const ResumeGroupItem: React.FC<IProps> = ({
               {
                 title
                 && (
-                  <div className="resume-group-item__title">{title}</div>
+                  <div className={`resume-group-item__title resume-group-item__title--${theme}`}>{title}</div>
                 )
               }
               {
                 subtitle
                 && (
-                  <div className="resume-group-item__subtitle">{subtitle}</div>
+                  <div className={`resume-group-item__subtitle resume-group-item__subtitle--${theme}`}>{subtitle}</div>
                 )
               }
             </div>
@@ -39,13 +41,13 @@ export const ResumeGroupItem: React.FC<IProps> = ({
               {
                 jobRole
                 && (
-                  <div className="resume-group-item__role">{jobRole}</div>
+                  <div className={`resume-group-item__role resume-group-item__role--${theme}`}>{jobRole}</div>
                 )
               }
               {
                 time
                 && (
-                  <div className="resume-group-item__time">{time}</div>
+                  <div className={`resume-group-item__time resume-group-item__time--${theme}`}>{time}</div>
                 )
               }
             </div>
