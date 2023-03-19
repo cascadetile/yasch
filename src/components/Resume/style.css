@@ -15,6 +15,7 @@
 
 .resume__name-and-story {
   max-width: 562px;
+  z-index: 1;
 }
 
 .resume__name {
