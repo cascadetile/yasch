@@ -1,6 +1,8 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
 import React, { useContext } from 'react';
+import { StarLarge } from '../../assets/StarLarge';
+import { StarMedium } from '../../assets/StarMedium';
 import { ThemeContext } from '../../contexts';
 import { ResumeGroup } from '../ResumeGroup';
 import { ResumeGroupItem } from '../ResumeGroupItem';
@@ -27,6 +29,12 @@ export const Resume: React.FC = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className="resume">
+      <div className="resume__star-large">
+        <StarLarge theme={theme === 'dark' ? '#373737' : '#CBCBCB'} />
+      </div>
+      <div className="resume__star-medium">
+        <StarMedium theme={theme === 'dark' ? '#373737' : '#CBCBCB'} />
+      </div>
       <div className="resume__name-and-story">
         <div>
           <div className={`resume__name resume__name--${theme}`}>Vladislav Yaschenkov</div>

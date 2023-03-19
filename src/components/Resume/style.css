@@ -9,6 +9,8 @@
   padding-left: 36px;
   padding-right: 36px;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .resume__name-and-story {
@@ -59,6 +61,21 @@
   margin-bottom: 156px;
 }
 
+.resume__star-large {
+  position: absolute;
+  top: 146px;
+  left: 0;
+  pointer-events: none;
+}
+
+.resume__star-medium {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  pointer-events: none;
+}
+
 @media (max-width: 1000px) {
   .resume {
     flex-direction: column;
@@ -83,6 +100,12 @@
     margin-top: 64px;
     margin-bottom: 96px;
   }
+  .resume__star-large {
+    display: none;
+  }
+  .resume__star-medium {
+    display: block;
+  }
 }
 
 @media (max-width: 800px) {
@@ -94,6 +117,9 @@
   }
   .resume__groups {
     margin-top: 56px;
+  }
+  .resume__star-medium {
+    right: -65px;
   }
 }
 
@@ -110,5 +136,9 @@
   }
   .resume__groups {
     margin-top: 44px;
+  }
+  .resume__star-medium {
+    top: -42px;
+    right: -120px;
   }
 }
