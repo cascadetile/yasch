@@ -30,6 +30,10 @@
   margin-bottom: 24px;
 }
 
+.resume__name--dark {
+  color: #FFFFFF;
+}
+
 .resume__position {
   font-family: 'Inter';
   font-style: normal;
@@ -41,6 +45,10 @@
   letter-spacing: -0.05em;
 
   color: #000000;
+}
+
+.resume__position--dark {
+  color: #FFFFFF;
 }
 
 .resume__links {

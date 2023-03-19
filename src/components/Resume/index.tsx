@@ -1,6 +1,7 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../contexts';
 import { ResumeGroup } from '../ResumeGroup';
 import { ResumeGroupItem } from '../ResumeGroupItem';
 import { ResumeStoryOnMe } from '../ResumeStoryOnMe';
@@ -23,12 +24,13 @@ In addition, I have a keen interest in history and enjoy learning about the past
 how it has shaped the world we live in today.`;
 
 export const Resume: React.FC = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="resume">
       <div className="resume__name-and-story">
         <div>
-          <div className="resume__name">Vladislav Yaschenkov</div>
-          <div className="resume__position">UX/UI Designer</div>
+          <div className={`resume__name resume__name--${theme}`}>Vladislav Yaschenkov</div>
+          <div className={`resume__position resume__position--${theme}`}>UX/UI Designer</div>
         </div>
         <ResumeStoryOnMe />
       </div>
