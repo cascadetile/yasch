@@ -1,21 +1,23 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useContext } from 'react';
 import './style.css';
 import { SocialLink } from '../SocialLink';
 import { YourAndMyTime } from '../YourAndMyTime';
+import { ThemeContext } from '../../contexts';
 
 export const PreFooter: React.FC = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div id="contacts" className="prefooter__wrapper">
+    <div id="contacts" className={`prefooter__wrapper prefooter__wrapper--${theme}`}>
       <div className="prefooter">
         <div className="prefooter__time-and-title-wrapper">
           <div className="prefooter__time-wrapper">
             <YourAndMyTime />
           </div>
           <div className="prefooter__title-wrapper">
-            <div className="prefooter__title-1">Thanks for stopping by!</div>
-            <div className="prefooter__title-2">
+            <div className={`prefooter__title-1 prefooter__title-1--${theme}`}>Thanks for stopping by!</div>
+            <div className={`prefooter__title-2 prefooter__title-2--${theme}`}>
               If you like the work you’ve seen so far, let’s connect.
             </div>
           </div>
@@ -23,8 +25,8 @@ export const PreFooter: React.FC = () => {
         <div className="prefooter__email-and-links">
           <form>
             <div className="prefooter__email-form">
-              <input className="prefooter__email-input" type="text" placeholder="Enter your email address" />
-              <button className="prefooter__email-btn" type="submit">Connect</button>
+              <input className={`prefooter__email-input prefooter__email-input--${theme}`} type="text" placeholder="Enter your email address" />
+              <button className={`prefooter__email-btn prefooter__email-btn--${theme}`} type="submit">Connect</button>
             </div>
           </form>
           <div className="prefooter__links">

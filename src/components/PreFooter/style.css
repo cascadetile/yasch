@@ -2,6 +2,10 @@
   background-color: #F9F9F9;
 }
 
+.prefooter__wrapper--dark {
+  background-color: #151515;
+}
+
 .prefooter {
   display: flex;
   flex-direction: column;
@@ -35,6 +39,10 @@
   color: #000000;
 }
 
+.prefooter__title-1--dark {
+  color: #FFFFFF;
+}
+
 .prefooter__title-2 {
   font-family: 'Inter';
   font-style: normal;
@@ -48,6 +56,10 @@
   /* Black */
 
   color: #000000;
+}
+
+.prefooter__title-2--dark {
+  color: #FFFFFF;
 }
 
 .prefooter__email-and-links {
@@ -92,6 +104,10 @@
   color: #9D9D9D;
 }
 
+.prefooter__email-input--dark {
+  background: #373737;
+}
+
 .prefooter__email-btn {
   font-family: 'Inter';
   font-style: normal;
@@ -109,6 +125,10 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.prefooter__email-btn--dark {
+  color: #FFFFFF;
 }
 
 .prefooter__links {
