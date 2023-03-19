@@ -58,7 +58,7 @@
 }
 
 .toggle__input:checked + .toggle__span {
-  background-color: #00c853;
+  background-color: #F26F0F;
 }
 
 .toggle__input:checked + .toggle__span:before {
