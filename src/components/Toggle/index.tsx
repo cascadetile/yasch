@@ -20,7 +20,7 @@ export const Toggle: React.FC<Props> = ({ toggled, onClick }) => {
   return (
     <div className="toggle">
       <label className="toggle__label">
-        <input className="toggle__input" type="checkbox" defaultChecked={isToggled} onClick={callback} />
+        <input className="toggle__input" type="checkbox" autoComplete="off" defaultChecked={isToggled} onClick={callback} />
         <span className="toggle__span" />
       </label>
     </div>
