@@ -26,3 +26,7 @@
 
   box-sizing: border-box;
 }
+
+.footer--dark {
+  background: #000000;
+}
