@@ -1,15 +1,17 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../contexts';
 import './style.css';
 
 export const ResumeStoryOnMe: React.FC = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="resume-story-on-me">
-      <div className="resume-story-on-me__title">
+      <div className={`resume-story-on-me__title resume-story-on-me__title--${theme}`}>
         The inside story on me
       </div>
-      <div className="resume-story-on-me__text">
+      <div className={`resume-story-on-me__text resume-story-on-me__text--${theme}`}>
         <div>
           As a UX/UI designer with 2 years of experience, I have a strong foundation
           in user-centered design principles and a passion for creating intuitive and

@@ -20,6 +20,10 @@
   color: #000000;
 }
 
+.resume-story-on-me__title--dark {
+  color: #FFFFFF;
+}
+
 .resume-story-on-me__text {
   display: flex;
   flex-direction: column;
@@ -36,6 +40,10 @@
   /* Black */
 
   color: #000000;
+}
+
+.resume-story-on-me__text--dark {
+  color: #FFFFFF;
 }
 
 @media (max-width: 1000px) {
