@@ -1,10 +1,13 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  useContext, useEffect, useRef, useState,
+} from 'react';
 import './style.css';
 import { SocialLink } from '../SocialLink';
 import { OutsideLink } from '../../assets/OutsideLink';
 import { TableHoverPicture } from '../TableHoverPicture';
+import { ThemeContext } from '../../contexts';
 
 const recentWorks = [
   {
@@ -28,6 +31,7 @@ const recentWorks = [
 ];
 
 export const RecentWorks: React.FC = () => {
+  const { theme } = useContext(ThemeContext);
   const [imgUrl, setImgUrl] = useState('');
   const [previewCoords, setPreviewCoords] = useState([0, 0]);
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
@@ -61,95 +65,97 @@ export const RecentWorks: React.FC = () => {
   };
 
   return (
-    <div id="works" className="recent-works">
-      <div className="recent-works__title-and-links">
-        <div className="recent-works__title-wrapper">
-          <h2 className="recent-works__title">Recent works</h2>
-          &nbsp;
-          <span className="recent-works__amount">
-            (
-            {`0${recentWorks.length.toString()}`}
-            )
-          </span>
-        </div>
-        <div className="recent-works__links">
-          <SocialLink link="https://dribbble.com/PinkAversa" text="Dribbble" />
-          <SocialLink link="https://www.behance.net/aversa" text="Behance" />
-        </div>
-      </div>
-      <div className="recent-works__table-wrapper">
-        <table ref={tableRef} className="recent-works__table">
-          <thead>
-            <tr>
-              <th className="recent-works__table-header-cell">Project</th>
-              <th
-                className="recent-works__table-header-cell recent-works__table-header-year-cell"
-              >
-                Year
-              </th>
-              <th
-                className="recent-works__table-header-cell recent-works__table-header-type-cell"
-              >
-                Type
-              </th>
-              <th className="recent-works__table-header-cell">&nbsp;</th>
-            </tr>
-          </thead>
-          <tbody>
-            {recentWorks.map((work) => (
-              <tr
-                onMouseEnter={() => {
-                  if (!isMobile) {
-                    setIsPreviewVisible(true);
-                    setImgUrl(work.preview);
-                  }
-                }}
-                onMouseMove={(e) => {
-                  setTimeout(() => {
-                    setPreviewCoords([e.pageX - 100, e.pageY - 100]);
-                    calcTiltDegrees(e);
-                  }, 100);
-                }}
-                onMouseLeave={() => setIsPreviewVisible(false)}
-                className="recent-works__table-row"
-              >
-                <td className="recent-works__table-cell">
-                  <span className="recent-works__table-cell-content">{work.project}</span>
-                  <div className="recent-works__table-cell-bg" />
-                </td>
-                <td
-                  className="recent-works__table-cell recent-works__table-header-year-cell"
-                >
-                  <span className="recent-works__table-cell-content">{work.year}</span>
-                  <div className="recent-works__table-cell-bg" />
-                </td>
-                <td
-                  className="recent-works__table-cell recent-works__table-header-type-cell"
-                >
-                  <span className="recent-works__table-cell-content">{work.type}</span>
-                  <div className="recent-works__table-cell-bg" />
-                </td>
-                <td className="recent-works__table-cell recent-works__table-cell--last">
-                  <a className="recent-works__table-link" href={work.link}>
-                    View full case
-                    &nbsp;
-                    <OutsideLink />
-                  </a>
-                  <div className="recent-works__table-cell-bg" />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      {
-        isPreviewVisible
-        && (
-          <div className="recent-works__preview-wrapper" style={{ top: previewCoords[1], left: previewCoords[0], transform: `rotate(${tiltDegree}deg)` }}>
-            <TableHoverPicture imgUrl={imgUrl} />
+    <div className={`recent-works__wrapper recent-works__wrapper--${theme}`}>
+      <div id="works" className="recent-works">
+        <div className="recent-works__title-and-links">
+          <div className="recent-works__title-wrapper">
+            <h2 className={`recent-works__title recent-works__title--${theme}`}>Recent works</h2>
+            &nbsp;
+            <span className="recent-works__amount">
+              (
+              {`0${recentWorks.length.toString()}`}
+              )
+            </span>
           </div>
-        )
-      }
+          <div className="recent-works__links">
+            <SocialLink link="https://dribbble.com/PinkAversa" text="Dribbble" />
+            <SocialLink link="https://www.behance.net/aversa" text="Behance" />
+          </div>
+        </div>
+        <div className="recent-works__table-wrapper">
+          <table ref={tableRef} className="recent-works__table">
+            <thead>
+              <tr>
+                <th className={`recent-works__table-header-cell recent-works__table-cell--${theme}`}>Project</th>
+                <th
+                  className={`recent-works__table-header-cell recent-works__table-cell--${theme} recent-works__table-header-year-cell`}
+                >
+                  Year
+                </th>
+                <th
+                  className={`recent-works__table-header-cell recent-works__table-cell--${theme} recent-works__table-header-type-cell`}
+                >
+                  Type
+                </th>
+                <th className={`recent-works__table-header-cell recent-works__table-cell--${theme}`}>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              {recentWorks.map((work) => (
+                <tr
+                  onMouseEnter={() => {
+                    if (!isMobile) {
+                      setIsPreviewVisible(true);
+                      setImgUrl(work.preview);
+                    }
+                  }}
+                  onMouseMove={(e) => {
+                    setTimeout(() => {
+                      setPreviewCoords([e.pageX - 100, e.pageY - 100]);
+                      calcTiltDegrees(e);
+                    }, 100);
+                  }}
+                  onMouseLeave={() => setIsPreviewVisible(false)}
+                  className="recent-works__table-row"
+                >
+                  <td className={`recent-works__table-cell recent-works__table-cell--${theme}`}>
+                    <a href={work.link} className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.project}</a>
+                    <div className={`recent-works__table-cell-bg recent-works__table-cell-bg--${theme}`} />
+                  </td>
+                  <td
+                    className={`recent-works__table-cell recent-works__table-header-year-cell recent-works__table-cell--${theme}`}
+                  >
+                    <a href={work.link} className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.year}</a>
+                    <div className={`recent-works__table-cell-bg recent-works__table-cell-bg--${theme}`} />
+                  </td>
+                  <td
+                    className={`recent-works__table-cell recent-works__table-header-type-cell recent-works__table-cell--${theme}`}
+                  >
+                    <a href={work.link} className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.type}</a>
+                    <div className={`recent-works__table-cell-bg recent-works__table-cell-bg--${theme}`} />
+                  </td>
+                  <td className={`recent-works__table-cell recent-works__table-cell--last recent-works__table-cell--${theme}`}>
+                    <a href={work.link} className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>
+                      View full case
+                      &nbsp;
+                      <OutsideLink />
+                    </a>
+                    <div className={`recent-works__table-cell-bg recent-works__table-cell-bg--${theme}`} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {
+          isPreviewVisible
+          && (
+            <div className="recent-works__preview-wrapper" style={{ top: previewCoords[1], left: previewCoords[0], transform: `rotate(${tiltDegree}deg)` }}>
+              <TableHoverPicture imgUrl={imgUrl} />
+            </div>
+          )
+        }
+      </div>
     </div>
   );
 };
