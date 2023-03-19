@@ -7,16 +7,11 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 96px 36px 36px 36px;
-  border-bottom: 1px solid #E4E4E4;
 
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-}
-
-.about-me--dark {
-  border-bottom: 1px solid #373737;
 }
 
 .about-me__left {
@@ -109,6 +104,17 @@
 
 .about-me__right-title-2--dark {
   color: #FFFFFF;
+}
+
+.about-me__bottom-divider {
+  margin-left: 36px;
+  margin-right: 36px;
+  height: 1px;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.about-me__bottom-divider--dark {
+  border-bottom: 1px solid #373737;
 }
 
 @media (max-width: 1200px) {
