@@ -13,6 +13,10 @@
   padding-bottom: 20px;
 }
 
+.resume-group__title--dark {
+  color: #FFFFFF;
+}
+
 @media (max-width: 800px) {
   .resume-group__title {
     font-size: 28px;
