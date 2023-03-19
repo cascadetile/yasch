@@ -9,7 +9,7 @@ function App() {
   const [theme, setTheme] = useState('light');
   const themeMemo = useMemo(() => ({ theme, setTheme }), [theme]);
   return (
-    <div className="app">
+    <div className={`app app--${theme}`}>
       <ThemeContext.Provider value={themeMemo}>
         <BrowserRouter>
           <Routes>
