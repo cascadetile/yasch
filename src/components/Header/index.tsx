@@ -60,7 +60,7 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
               My resume
             </NavLink>
           </div>
-          <Toggle toggled={false} onClick={onToggleClick} />
+          <Toggle toggled={theme === 'dark'} onClick={onToggleClick} />
         </div>
       </div>
     </div>
