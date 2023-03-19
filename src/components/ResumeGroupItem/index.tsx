@@ -18,7 +18,7 @@ export const ResumeGroupItem: React.FC<IProps> = ({
 }) => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="resume-group-item">
+    <div className={`resume-group-item resume-group-item--${theme}`}>
       {
         (title || subtitle || jobRole || time)
         && (

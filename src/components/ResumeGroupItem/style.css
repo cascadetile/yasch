@@ -4,6 +4,10 @@
   border-top: 1px solid #E4E4E4;
 }
 
+.resume-group-item--dark {
+  border-top: 1px solid #373737;
+}
+
 .resume-group-item__header {
   display: flex;
   flex-direction: row;
