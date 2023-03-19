@@ -26,7 +26,7 @@ export const StoryOnMe: React.FC = () => {
             user needs and develop intuitive and user-friendly interfaces.
           </div>
           <div>
-            <Link className="story-on-me__resume-link" to="/resume">
+            <Link className={`story-on-me__resume-link story-on-me__resume-link--${theme}}`} to="/resume">
               See my resume
             </Link>
           </div>

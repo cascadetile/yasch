@@ -81,6 +81,10 @@
   color: #000000;
 }
 
+.story-on-me__resume-link {
+  color: #FFFFFF;
+}
+
 @media (max-width: 1200px) {
   .story-on-me {
     flex-direction: column;
