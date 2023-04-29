@@ -119,23 +119,23 @@ export const RecentWorks: React.FC = () => {
                   className="recent-works__table-row"
                 >
                   <td className={`recent-works__table-cell recent-works__table-cell--${theme}`}>
-                    <a href={work.link} className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.project}</a>
+                    <a href={work.link} target="_blank" rel="noopener noreferrer" className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.project}</a>
                     <div className={`recent-works__table-cell-bg recent-works__table-cell-bg--${theme}`} />
                   </td>
                   <td
                     className={`recent-works__table-cell recent-works__table-header-year-cell recent-works__table-cell--${theme}`}
                   >
-                    <a href={work.link} className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.year}</a>
+                    <a href={work.link} target="_blank" rel="noopener noreferrer" className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.year}</a>
                     <div className={`recent-works__table-cell-bg recent-works__table-cell-bg--${theme}`} />
                   </td>
                   <td
                     className={`recent-works__table-cell recent-works__table-header-type-cell recent-works__table-cell--${theme}`}
                   >
-                    <a href={work.link} className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.type}</a>
+                    <a href={work.link} target="_blank" rel="noopener noreferrer" className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>{work.type}</a>
                     <div className={`recent-works__table-cell-bg recent-works__table-cell-bg--${theme}`} />
                   </td>
                   <td className={`recent-works__table-cell recent-works__table-cell--last recent-works__table-cell--${theme}`}>
-                    <a href={work.link} className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>
+                    <a href={work.link} target="_blank" rel="noopener noreferrer" className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>
                       View full case
                       &nbsp;
                       <OutsideLink />
