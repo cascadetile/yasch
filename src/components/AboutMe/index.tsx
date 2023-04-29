@@ -5,6 +5,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../../contexts';
 import { Tooltip } from '../Tooltip';
+import { Check } from '../../assets/Check';
 import './style.css';
 
 const email = 'vlad@co.dev';
@@ -76,7 +77,18 @@ export const AboutMe: React.FC = () => {
       {
         isTooltipVisible
         && (
-          <Tooltip posX={tooltipPos[1]} posY={tooltipPos[0]} text={tooltipText} />
+          <Tooltip posX={tooltipPos[1]} posY={tooltipPos[0]}>
+            {
+              tooltipText === 'Click to copy'
+                ? <div>Click to copy</div>
+                : (
+                  <div className="tooltip__email-copied">
+                    Email Copied
+                    <Check />
+                  </div>
+                )
+            }
+          </Tooltip>
         )
       }
       <div className={`about-me__bottom-divider about-me__bottom-divider--${theme}`} />

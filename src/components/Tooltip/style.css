@@ -22,3 +22,10 @@
 
   pointer-events: none;
 }
+
+.tooltip__email-copied {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 7px;
+}

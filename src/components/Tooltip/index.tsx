@@ -4,15 +4,15 @@ import React from 'react';
 import './style.css';
 
 interface IProps {
-  text: string
   posX: number
   posY: number
+  children: React.ReactNode
 }
 
-export const Tooltip: React.FC<IProps> = ({ text, posX, posY }) => {
+export const Tooltip: React.FC<IProps> = ({ posX, posY, children }) => {
   return (
     <div style={{ left: posY, top: posX }} className="tooltip">
-      {text}
+      {children}
     </div>
   );
 };
