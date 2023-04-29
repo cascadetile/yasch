@@ -15,6 +15,11 @@
   pointer-events: none;
 }
 
+.table-hover-picture--dark {
+  background: #151515;
+  border: 1px solid #373737;
+}
+
 .table-hover-picture__img {
   width: 100%;
 }
