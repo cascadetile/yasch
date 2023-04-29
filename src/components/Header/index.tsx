@@ -39,7 +39,7 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
                   </NavLink>
                 </div>
                 <div className="header__menu-item">
-                  <a href="#aboutme" className="header__menu-item-link">About me</a>
+                  <a href="#storyonme" className="header__menu-item-link">About me</a>
                 </div>
                 <div className="header__menu-item">
                   <a href="#works" className="header__menu-item-link">Works</a>

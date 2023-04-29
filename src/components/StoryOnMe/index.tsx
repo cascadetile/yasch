@@ -8,7 +8,7 @@ import './style.css';
 export const StoryOnMe: React.FC = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className={`story-on-me__wrapper story-on-me__wrapper--${theme}`}>
+    <div id="storyonme" className={`story-on-me__wrapper story-on-me__wrapper--${theme}`}>
       <div className="story-on-me">
         <div className={`story-on-me__left story-on-me__left--${theme}`}>
           The inside story on me
