@@ -66,7 +66,7 @@ export const RecentWorks: React.FC = () => {
 
   return (
     <div className={`recent-works__wrapper recent-works__wrapper--${theme}`}>
-      <div id="works" className="recent-works">
+      <div id="works" className="anchor recent-works">
         <div className="recent-works__title-and-links">
           <div className="recent-works__title-wrapper">
             <h2 className={`recent-works__title recent-works__title--${theme}`}>Recent works</h2>

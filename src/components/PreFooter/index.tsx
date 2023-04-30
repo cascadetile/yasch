@@ -9,7 +9,7 @@ import { ThemeContext } from '../../contexts';
 export const PreFooter: React.FC = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div id="contacts" className={`prefooter__wrapper prefooter__wrapper--${theme}`}>
+    <div id="contacts" className={`anchor prefooter__wrapper prefooter__wrapper--${theme}`}>
       <div className="prefooter">
         <div className="prefooter__time-and-title-wrapper">
           <div className="prefooter__time-wrapper">

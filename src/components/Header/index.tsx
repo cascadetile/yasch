@@ -1,6 +1,6 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable arrow-body-style */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './style.css';
 import { Logo } from '../../assets/Logo';
@@ -17,6 +17,27 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
     setTheme(value ? 'dark' : 'light');
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const anchorId = entry.target.id;
+        const menuItem = document.querySelector(`[href='#${anchorId}']`);
+        if (entry.isIntersecting && menuItem) {
+          menuItem.classList.add('header__menu-item-link--active');
+        } else if (!entry.isIntersecting && menuItem) {
+          menuItem.classList.remove('header__menu-item-link--active');
+        }
+      });
+    }, { threshold: 0.8 });
+
+    const anchors = document.querySelectorAll('.anchor');
+    anchors.forEach((anchor) => {
+      observer.observe(anchor);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={`header__wrapper header__wrapper--${theme}`}>
       <div className="header">
@@ -32,7 +53,7 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
               <>
                 <div className="header__menu-item header__menu-item--selected">
                   <NavLink
-                    className={({ isActive }) => { return isActive ? 'header__menu-item-link header__menu-item-link--active' : 'header__menu-item-link'; }}
+                    className="header__menu-item-link"
                     to="/"
                   >
                     Home
