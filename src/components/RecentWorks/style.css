@@ -190,6 +190,12 @@
   }
 }
 
+@media (max-width: 725px) {
+  .recent-works__title {
+    font-size: 38px;
+  }
+}
+
 @media (max-width: 570px) {
   .recent-works {
     padding: 56px 16px 56px 16px;
