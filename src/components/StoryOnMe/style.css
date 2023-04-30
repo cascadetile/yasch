@@ -89,6 +89,9 @@
     width: auto;
     margin-bottom: 42px;
   }
+  .story-on-me__right {
+    max-width: none;
+  }
 }
 
 @media (max-width: 800px) {
