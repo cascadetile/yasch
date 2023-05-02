@@ -3,32 +3,20 @@
 import React, {
   useContext, useEffect, useRef, useState,
 } from 'react';
+import axios from 'axios';
 import './style.css';
 import { SocialLink } from '../SocialLink';
 import { OutsideLink } from '../../assets/OutsideLink';
 import { TableHoverPicture } from '../TableHoverPicture';
 import { ThemeContext } from '../../contexts';
 
-const recentWorks = [
-  {
-    project: 'The Next-Gen Box', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko', preview: 'https://cdn.dribbble.com/userupload/4213309/file/original-9c2bffae058e02b03ba88559922b3a79.png?compress=1&resize=1600x1200',
-  },
-  {
-    project: 'STANZA', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko', preview: 'https://cdn.dribbble.com/userupload/4213308/file/original-cd478dc81785b164d300bfc3bc441052.png?compress=1&resize=1600x1200',
-  },
-  {
-    project: 'Fluxflow', year: 2022, type: 'Landing page', link: 'https://dribbble.com/yaschenko', preview: 'https://cdn.dribbble.com/userupload/4213308/file/original-cd478dc81785b164d300bfc3bc441052.png?compress=1&resize=1600x1200',
-  },
-  {
-    project: 'WATT', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko', preview: '',
-  },
-  {
-    project: 'Rarepass', year: 2022, type: 'Mobile App', link: 'https://dribbble.com/yaschenko', preview: '',
-  },
-  {
-    project: 'Posters', year: 2022, type: 'Graphic Design', link: 'https://dribbble.com/yaschenko', preview: '',
-  },
-];
+interface IRecentWork {
+  project: string,
+  year: number,
+  type: string,
+  link: string,
+  preview: string
+}
 
 export const RecentWorks: React.FC = () => {
   const { theme } = useContext(ThemeContext);
@@ -37,6 +25,7 @@ export const RecentWorks: React.FC = () => {
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
   const [tableRect, setTableRect] = useState<DOMRect | null>(null);
   const [tiltDegree, setTiltDegree] = useState<number>(0);
+  const [data, setData] = useState<IRecentWork[]>([]);
 
   const [width, setWidth] = useState<number>(window.innerWidth);
 
@@ -48,6 +37,14 @@ export const RecentWorks: React.FC = () => {
 
   const tableRef = useRef<HTMLTableElement>(null);
   useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        'https://raw.githubusercontent.com/cascadetile/yasch/master/recent-works.json',
+      );
+
+      setData(result.data);
+    };
+    fetchData();
     if (tableRef.current) {
       setTableRect(tableRef.current.getBoundingClientRect());
     }
@@ -73,7 +70,7 @@ export const RecentWorks: React.FC = () => {
             &nbsp;
             <span className="recent-works__amount">
               (
-              {`0${recentWorks.length.toString()}`}
+              {`0${data.length.toString()}`}
               )
             </span>
           </div>
@@ -101,7 +98,7 @@ export const RecentWorks: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              {recentWorks.map((work) => (
+              {data.map((work) => (
                 <tr
                   onMouseEnter={() => {
                     if (!isMobile) {
