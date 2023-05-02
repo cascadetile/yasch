@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  column-gap: 70px;
   align-items: center;
 
   background: #FFFFFF;
@@ -29,4 +30,31 @@
 
 .footer--dark {
   background: #000000;
+}
+
+.footer__left-sm {
+  display: none;
+  white-space: nowrap;
+}
+
+.footer__right-link {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  letter-spacing: -0.05em;
+  color: #000000;
+  white-space: nowrap;
+}
+
+@media (max-width: 375px) {
+  .footer__left-md-plus {
+    display: none;
+  }
+  .footer__left-sm {
+    display: block;
+  }
 }
