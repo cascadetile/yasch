@@ -1,44 +1,37 @@
 [
   {
-      "project": "The Next-Gen Box",
-      "year": 2022,
-      "type": "Landing page",
+      "project": "Numeral",
+      "year": 2023,
+      "type": "Web application",
       "link": "https://dribbble.com/yaschenko",
-      "preview": "https://cdn.dribbble.com/userupload/4213309/file/original-9c2bffae058e02b03ba88559922b3a79.png?compress=1&resize=1600x1200"
+      "preview": "/numeral.jpg"
   },
   {
-      "project": "STANZA",
+      "project": "SeedStory",
       "year": 2022,
-      "type": "Landing page",
+      "type": "Mobile App, Landing page, Logo",
       "link": "https://dribbble.com/yaschenko",
-      "preview": "https://cdn.dribbble.com/userupload/4213308/file/original-cd478dc81785b164d300bfc3bc441052.png?compress=1&resize=1600x1200"
-  },
-  {
-      "project": "Fluxflow",
-      "year": 2022,
-      "type": "Landing page",
-      "link": "https://dribbble.com/yaschenko",
-      "preview": "https://cdn.dribbble.com/userupload/4213308/file/original-cd478dc81785b164d300bfc3bc441052.png?compress=1&resize=1600x1200"
+      "preview": "/seedstory.png"
   },
   {
       "project": "WATT",
       "year": 2022,
       "type": "Mobile App",
       "link": "https://dribbble.com/yaschenko",
-      "preview": ""
+      "preview": "/WATT.png"
   },
   {
       "project": "Rarepass",
       "year": 2022,
       "type": "Mobile App",
       "link": "https://dribbble.com/yaschenko",
-      "preview": ""
+      "preview": "/rarepass.png"
   },
   {
-      "project": "Posters",
-      "year": 2022,
-      "type": "Graphic Design",
+      "project": "Cultway",
+      "year": 2023,
+      "type": "Web application",
       "link": "https://dribbble.com/yaschenko",
-      "preview": ""
+      "preview": "/cultway.png"
   }
 ]
