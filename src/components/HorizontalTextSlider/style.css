@@ -9,6 +9,10 @@
   padding-bottom: 120px;
 }
 
+.horizontal-text-slider__animation-wrapper {
+  animation: wrapper-init 1s ease-in-out 0s;
+}
+
 .horizontal-text-slider__wrapper--dark {
   background-color: rgb(0, 0, 0);
 }
@@ -68,6 +72,17 @@
   100% {
     transform: translate(-100%, 0);
     -webkit-transform: translate(-100%, 0);
+  }
+}
+
+@keyframes wrapper-init {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
 

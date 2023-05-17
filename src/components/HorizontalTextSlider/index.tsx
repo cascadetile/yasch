@@ -15,11 +15,13 @@ export const HorizontalTextSlider: React.FC = () => {
   }, []);
   return (
     <div className={`horizontal-text-slider__wrapper horizontal-text-slider__wrapper--${theme}`}>
-      <div className={textSliderClassName1}>
-        &nbsp;ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span>
-      </div>
-      <div className={textSliderClassName2}>
-        &nbsp;ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span>
+      <div className="horizontal-text-slider__animation-wrapper">
+        <div className={textSliderClassName1}>
+          &nbsp;ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span>
+        </div>
+        <div className={textSliderClassName2}>
+          &nbsp;ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span>
+        </div>
       </div>
     </div>
   );
