@@ -12,6 +12,7 @@
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+  animation: aboutme-init 1s ease-in-out 0s;
 }
 
 .about-me__left {
@@ -160,5 +161,16 @@
   .about-me__left-title-2 {
     font-size: 40px;
     max-width: 343px;
+  }
+}
+
+@keyframes aboutme-init {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
