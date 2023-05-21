@@ -2,6 +2,10 @@
   background: rgb(0, 0, 0, 1);
 }
 
+.time-and-links__wrapper {
+  animation: timeandlinks-init .5s ease-in-out 0s;
+}
+
 .time-and-links {
   display: flex;
   flex-direction: row;
@@ -25,5 +29,14 @@
   .time-and-links {
     flex-direction: column;
     row-gap: 36px;
+  }
+}
+
+@keyframes timeandlinks-init {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
