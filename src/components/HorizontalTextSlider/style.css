@@ -10,7 +10,7 @@
 }
 
 .horizontal-text-slider__animation-wrapper {
-  animation: wrapper-init 1s ease-in-out 0s;
+  animation: wrapper-init .5s ease-in-out 0s;
 }
 
 .horizontal-text-slider__wrapper--dark {
@@ -77,11 +77,9 @@
 
 @keyframes wrapper-init {
   0% {
-    opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
   100% {
-    opacity: 1;
     transform: translateX(0%);
   }
 }
