@@ -25,6 +25,7 @@
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  animation: header-init .5s ease-in-out 0s;
 }
 
 .header__menu {
@@ -103,5 +104,14 @@
 @media (max-width: 735px) {
   .header__menu {
     display: none;
+  }
+}
+
+@keyframes header-init {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
