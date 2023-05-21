@@ -85,6 +85,7 @@
   /* identical to box height, or 18px */
 
   letter-spacing: -0.05em;
+  white-space: nowrap;
 
   /* Black */
 
