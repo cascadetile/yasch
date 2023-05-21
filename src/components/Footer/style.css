@@ -50,6 +50,10 @@
   white-space: nowrap;
 }
 
+.footer__right-link--dark {
+  color: #ffffff;
+}
+
 @media (max-width: 375px) {
   .footer__left-md-plus {
     display: none;
