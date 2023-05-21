@@ -55,8 +55,12 @@
   transition: all 1s;
 }
 
-.header__menu-item--selected {
+.header__menu-item--selected--light {
   color: #000000;
+}
+
+.header__menu-item--selected--dark {
+  color: #ffffff;
 }
 
 .header__menu-item--resume {

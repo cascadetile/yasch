@@ -51,7 +51,7 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
             !hideMenu
             && (
               <>
-                <div className="header__menu-item header__menu-item--selected">
+                <div className={`header__menu-item header__menu-item--selected--${theme}`}>
                   <NavLink
                     className="header__menu-item-link"
                     to="/"
