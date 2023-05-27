@@ -3,7 +3,7 @@
 }
 
 .about-me__wrapper {
-  animation: aboutme-init .5s ease-in-out 0s;
+  animation: aboutme-init .5s ease-out 0s;
 }
 
 .about-me {
@@ -170,7 +170,7 @@
 @keyframes aboutme-init {
   0% {
     opacity: 0;
-    transform: translateY(80%);
+    transform: translateY(200%);
   }
   100% {
     opacity: 1;
