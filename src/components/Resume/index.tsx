@@ -49,25 +49,31 @@ export const Resume: React.FC = () => {
           <ResumeGroup title="Experience" marginTop={0} />
           <ResumeGroupItem
             title="co.dev"
-            subtitle="Brea, California · Remote"
             jobRole="UX/UI Designer"
             time="Sep 2022 – Present"
             text={codev}
-          />
+          >
+            Brea, California
+            <span className="resume-group-item__remote"> · Remote</span>
+          </ResumeGroupItem>
           <ResumeGroupItem
             title="Cultway"
-            subtitle="Berlin, Germany · Remote"
             jobRole="UX/UI Designer"
             time="Feb 2023 – Present"
             text={cultway}
-          />
+          >
+            Berlin, Germany
+            <span className="resume-group-item__remote"> · Remote</span>
+          </ResumeGroupItem>
           <ResumeGroupItem
             title="H1 Agency"
-            subtitle="Lviv, Ukraine · Remote"
             jobRole="UX/UI Designer"
             time="Aug 2022 – Sep 2022"
             text={h1agency}
-          />
+          >
+            Lviv, Ukraine
+            <span className="resume-group-item__remote"> · Remote</span>
+          </ResumeGroupItem>
           <ResumeGroup title="Education" marginTop={64} />
           <ResumeGroupItem
             title="Kryvyi Rih State Pedagogical University"

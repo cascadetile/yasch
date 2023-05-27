@@ -129,3 +129,9 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 480px) {
+  .resume-group-item__remote {
+    display: none;
+  }
+}

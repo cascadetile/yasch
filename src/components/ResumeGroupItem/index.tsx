@@ -7,20 +7,20 @@ import './style.css';
 
 interface IProps {
   title?: string
-  subtitle?: string
   jobRole?: string
   time?: string
   text: string
+  children?: React.ReactNode
 }
 
 export const ResumeGroupItem: React.FC<IProps> = ({
-  title, subtitle, jobRole, time, text,
+  title, jobRole, time, text, children,
 }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className={`resume-group-item resume-group-item--${theme}`}>
       {
-        (title || subtitle || jobRole || time)
+        (title || children || jobRole || time)
         && (
           <div className="resume-group-item__header">
             <div className="resume-group-item__title-and-subtitle">
@@ -31,9 +31,9 @@ export const ResumeGroupItem: React.FC<IProps> = ({
                 )
               }
               {
-                subtitle
+                children
                 && (
-                  <div className={`resume-group-item__subtitle resume-group-item__subtitle--${theme}`}>{subtitle}</div>
+                  <div className={`resume-group-item__subtitle resume-group-item__subtitle--${theme}`}>{children}</div>
                 )
               }
             </div>
