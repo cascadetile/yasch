@@ -36,7 +36,7 @@
 .horizontal-text-slider__two {
   transform: translate(100%);
   -webkit-transform: translate(100%);
-  animation: text-two-scroll 20s linear infinite;
+  animation: text-two-scroll 10s linear infinite;
 }
 
 .horizontal-text-slider__designer {
@@ -64,8 +64,8 @@
     -webkit-transform: translate(100%, 0);
   }
   100% {
-    transform: translate(-100%, 0);
-    -webkit-transform: translate(-100%, 0);
+    transform: translate(0%, 0);
+    -webkit-transform: translate(0%, 0);
   }
 }
 
