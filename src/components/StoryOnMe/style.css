@@ -79,6 +79,12 @@
   /* Black */
 
   color: inherit;
+  transition: all .5s;
+}
+
+.story-on-me__resume-link:hover {
+  color: #F26F0F;
+  transition: all .5s;
 }
 
 @media (max-width: 1200px) {
