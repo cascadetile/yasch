@@ -133,7 +133,7 @@ export const RecentWorks: React.FC = () => {
                   </td>
                   <td className={`recent-works__table-cell recent-works__table-cell--last recent-works__table-cell--${theme}`}>
                     <a href={work.link} target="_blank" rel="noopener noreferrer" className={`recent-works__table-cell-content recent-works__table-cell-content--${theme}`}>
-                      View full case
+                      Visit
                       &nbsp;
                       <OutsideLink />
                     </a>
