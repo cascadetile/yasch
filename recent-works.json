@@ -3,35 +3,35 @@
       "project": "Numeral",
       "year": 2023,
       "type": "Web application",
-      "link": "https://dribbble.com/yaschenko",
+      "link": "https://www.numeralhq.com/",
       "preview": "/numeral.jpg"
   },
   {
       "project": "SeedStory",
       "year": 2022,
       "type": "Mobile App",
-      "link": "https://dribbble.com/yaschenko",
+      "link": "https://www.seedstory.app/",
       "preview": "/seedstory.png"
   },
   {
       "project": "WATT",
       "year": 2022,
       "type": "Mobile App",
-      "link": "https://dribbble.com/yaschenko",
+      "link": "https://www.behance.net/gallery/140079571/WATT-Mobile-App",
       "preview": "/WATT.png"
   },
   {
       "project": "Rarepass",
       "year": 2022,
       "type": "Mobile App",
-      "link": "https://dribbble.com/yaschenko",
+      "link": "https://www.behance.net/gallery/140445175/Rarepass-Mobile-App",
       "preview": "/rarepass.png"
   },
   {
       "project": "Cultway",
       "year": 2023,
       "type": "Web application",
-      "link": "https://dribbble.com/yaschenko",
+      "link": "https://cultway.io/",
       "preview": "/cultway.png"
   }
 ]
