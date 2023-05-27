@@ -13,18 +13,23 @@ import './style.css';
 export const HorizontalTextSlider: React.FC = () => {
   const { theme } = useContext(ThemeContext);
   const textOne = useRef<HTMLDivElement>(null);
+  const textTwo = useRef<HTMLDivElement>(null);
   const [textSliderClassName1, setTextSliderClassName1] = useState('');
   const [textSliderClassName2, setTextSliderClassName2] = useState('');
-  const changeAnimationClass = () => {
-    setTextSliderClassName1('horizontal-text-slider horizontal-text-slider__two');
-  };
   useEffect(() => {
     setTextSliderClassName1('horizontal-text-slider horizontal-text-slider__one');
     setTextSliderClassName2('horizontal-text-slider horizontal-text-slider__two');
     if (textOne.current) {
       textOne.current.addEventListener('animationiteration', () => {
-        changeAnimationClass();
-        textOne.current?.removeEventListener('animationiteration', changeAnimationClass);
+        textOne.current?.classList.remove('horizontal-text-slider__one');
+        textOne.current?.classList.remove('horizontal-text-slider__two');
+        textOne.current?.classList.add('horizontal-text-slider__two');
+      });
+    }
+    if (textTwo.current) {
+      textTwo.current.addEventListener('animationiteration', () => {
+        textTwo.current?.classList.remove('horizontal-text-slider__two');
+        textTwo.current?.classList.add('horizontal-text-slider__two');
       });
     }
   }, []);
@@ -34,7 +39,7 @@ export const HorizontalTextSlider: React.FC = () => {
         <div ref={textOne} className={textSliderClassName1}>
           &nbsp;ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span>
         </div>
-        <div className={textSliderClassName2}>
+        <div ref={textTwo} className={textSliderClassName2}>
           &nbsp;ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span> ux/ui <span className={`horizontal-text-slider__designer horizontal-text-slider__designer--${theme}`}>designer</span>
         </div>
       </div>
