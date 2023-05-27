@@ -92,7 +92,9 @@ export const AboutMe: React.FC = () => {
             </Tooltip>
           )
         }
-        <div className={`about-me__bottom-divider about-me__bottom-divider--${theme}`} />
+        <div className="about-me__bottom-divider-wrapper">
+          <div className={`about-me__bottom-divider about-me__bottom-divider--${theme}`} />
+        </div>
       </div>
     </div>
   );
