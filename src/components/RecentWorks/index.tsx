@@ -29,25 +29,30 @@ export const RecentWorks: React.FC = () => {
 
   const [width, setWidth] = useState<number>(window.innerWidth);
 
+  const tableRef = useRef<HTMLTableElement>(null);
+
+  const updateTableRect = () => {
+    if (tableRef.current) {
+      setTableRect(tableRef.current.getBoundingClientRect());
+    }
+  };
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
+    updateTableRect();
   };
 
   const isMobile = width <= 768;
 
-  const tableRef = useRef<HTMLTableElement>(null);
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
         'https://raw.githubusercontent.com/cascadetile/yasch/master/recent-works.json',
       );
-
       setData(result.data);
     };
     fetchData();
-    if (tableRef.current) {
-      setTableRect(tableRef.current.getBoundingClientRect());
-    }
+
+    updateTableRect();
 
     window.addEventListener('resize', handleWindowSizeChange);
     return () => {
