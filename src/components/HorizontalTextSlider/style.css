@@ -30,13 +30,13 @@
 }
 
 .horizontal-text-slider__one {
-  animation: text-one-scroll 10s linear infinite;
+  animation: text-one-scroll 20s linear infinite;
 }
 
 .horizontal-text-slider__two {
   transform: translate(100%);
   -webkit-transform: translate(100%);
-  animation: text-two-scroll 10s linear infinite;
+  animation: text-two-scroll 20s linear infinite;
 }
 
 .horizontal-text-slider__designer {
