@@ -90,6 +90,22 @@
   text-decoration: none;
 }
 
+.header__menu-item-button {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  /* identical to box height, or 20px */
+  letter-spacing: -0.05em;
+  /* Black */
+  color: #9D9D9D;
+  transition: all 1s;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .header__menu-item-link--active {
   color: #F26F0F;
 }

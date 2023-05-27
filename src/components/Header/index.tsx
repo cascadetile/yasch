@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const anchorId = entry.target.id;
-        const menuItem = document.querySelector(`[href='#${anchorId}']`);
+        const menuItem = document.querySelector(`[data-href='#${anchorId}']`);
         if (entry.isIntersecting && menuItem) {
           menuItem.classList.add('header__menu-item-link--active');
         } else if (!entry.isIntersecting && menuItem) {
@@ -43,22 +43,15 @@ export const Header: React.FC = () => {
           </Link>
         </div>
         <div className="header__menu">
-          <div className={`header__menu-item header__menu-item--selected--${theme}`}>
-            <NavLink
-              className="header__menu-item-link"
-              to="/"
-            >
-              Home
-            </NavLink>
+          <button className="header__menu-item-button" type="button" onClick={() => window.scrollTo(0, 0)} data-href="#aboutme">Home</button>
+          <div className="header__menu-item">
+            <a href="#storyonme" data-href="#storyonme" className="header__menu-item-link">About me</a>
           </div>
           <div className="header__menu-item">
-            <a href="#storyonme" className="header__menu-item-link">About me</a>
+            <a href="#works" data-href="#works" className="header__menu-item-link">Works</a>
           </div>
           <div className="header__menu-item">
-            <a href="#works" className="header__menu-item-link">Works</a>
-          </div>
-          <div className="header__menu-item">
-            <a href="#contacts" className="header__menu-item-link">Contacts</a>
+            <a href="#contacts" data-href="#contacts" className="header__menu-item-link">Contacts</a>
           </div>
         </div>
         <div className="header__resume-and-toggle">
