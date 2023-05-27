@@ -7,11 +7,7 @@ import { Logo } from '../../assets/Logo';
 import { Toggle } from '../Toggle';
 import { ThemeContext } from '../../contexts';
 
-interface IProps {
-  hideMenu: boolean
-}
-
-export const Header: React.FC<IProps> = ({ hideMenu }) => {
+export const Header: React.FC = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const onToggleClick = (value: boolean) => {
     setTheme(value ? 'dark' : 'light');
@@ -47,30 +43,23 @@ export const Header: React.FC<IProps> = ({ hideMenu }) => {
           </Link>
         </div>
         <div className="header__menu">
-          {
-            !hideMenu
-            && (
-              <>
-                <div className={`header__menu-item header__menu-item--selected--${theme}`}>
-                  <NavLink
-                    className="header__menu-item-link"
-                    to="/"
-                  >
-                    Home
-                  </NavLink>
-                </div>
-                <div className="header__menu-item">
-                  <a href="#storyonme" className="header__menu-item-link">About me</a>
-                </div>
-                <div className="header__menu-item">
-                  <a href="#works" className="header__menu-item-link">Works</a>
-                </div>
-                <div className="header__menu-item">
-                  <a href="#contacts" className="header__menu-item-link">Contacts</a>
-                </div>
-              </>
-            )
-          }
+          <div className={`header__menu-item header__menu-item--selected--${theme}`}>
+            <NavLink
+              className="header__menu-item-link"
+              to="/"
+            >
+              Home
+            </NavLink>
+          </div>
+          <div className="header__menu-item">
+            <a href="#storyonme" className="header__menu-item-link">About me</a>
+          </div>
+          <div className="header__menu-item">
+            <a href="#works" className="header__menu-item-link">Works</a>
+          </div>
+          <div className="header__menu-item">
+            <a href="#contacts" className="header__menu-item-link">Contacts</a>
+          </div>
         </div>
         <div className="header__resume-and-toggle">
           <div className={`header__menu-item header__menu-item--resume header__menu-item--resume-${theme}`}>
