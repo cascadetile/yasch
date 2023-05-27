@@ -4,6 +4,7 @@
   height: 218px;
   padding-top: calc(120px - 36px);
   padding-bottom: 120px;
+  animation: vertical-wrapper-init .5s ease-in-out 0s;
 }
 
 .horizontal-text-slider__animation-wrapper {
@@ -76,6 +77,17 @@
   100% {
     opacity: 1;
     transform: translateX(0%);
+  }
+}
+
+@keyframes vertical-wrapper-init {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 
