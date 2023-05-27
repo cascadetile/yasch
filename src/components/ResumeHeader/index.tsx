@@ -14,7 +14,7 @@ export const ResumeHeader: React.FC = () => {
   };
 
   return (
-    <div className={`resume-header__wrapper header__wrapper--${theme}`}>
+    <div className={`resume-header__wrapper resume-header__wrapper--${theme}`}>
       <div className="resume-header">
         <div>
           <Link to="/">
