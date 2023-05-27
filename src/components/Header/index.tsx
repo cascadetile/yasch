@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
           menuItem.classList.remove('header__menu-item-link--active');
         }
       });
-    }, { threshold: 0.8 });
+    }, { threshold: 0.7 });
 
     const anchors = document.querySelectorAll('.anchor');
     anchors.forEach((anchor) => {
