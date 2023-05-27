@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { StarLarge } from '../../assets/StarLarge';
 import { StarMedium } from '../../assets/StarMedium';
 import { ThemeContext } from '../../contexts';
+import { ResumeEducation } from '../ResumeEducation';
 import { ResumeGroup } from '../ResumeGroup';
 import { ResumeGroupItem } from '../ResumeGroupItem';
 import { ResumeStoryOnMe } from '../ResumeStoryOnMe';
@@ -75,7 +76,7 @@ export const Resume: React.FC = () => {
             <span className="resume-group-item__remote"> · Remote</span>
           </ResumeGroupItem>
           <ResumeGroup title="Education" marginTop={64} />
-          <ResumeGroupItem
+          <ResumeEducation
             title="Kryvyi Rih State Pedagogical University"
             time="Sep 2017 – Sep 2022"
             text={education}
