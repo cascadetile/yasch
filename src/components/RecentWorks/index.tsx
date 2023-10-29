@@ -157,6 +157,9 @@ export const RecentWorks: React.FC = () => {
             </div>
           )
         }
+        {data.map((work) => (
+          <img src={work.preview} alt="recent work preview" className="recent-works__preview-prefetch" />
+        ))}
       </div>
     </div>
   );

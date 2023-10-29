@@ -18,6 +18,10 @@
   z-index: 3;
 }
 
+.recent-works__preview-prefetch {
+  display: none;
+}
+
 .recent-works__title-and-links {
   display: flex;
   flex-direction: row;
