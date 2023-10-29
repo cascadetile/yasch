@@ -33,5 +33,12 @@
       "type": "Web application",
       "link": "https://cultway.io/",
       "preview": "/cultway.png"
-  }
+  },
+  {
+    "project": "Clio",
+    "year": 2023,
+    "type": "Web application",
+    "link": "https://www.behance.net/gallery/182427205/Clio-Navigating-Clinical-Trials-with-Simplicity",
+    "preview": "/clio.jpg"
+}
 ]
